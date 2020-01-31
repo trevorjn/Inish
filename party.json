@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Malbolg",
+        "ac": 20,
+        "max_hp": 84,
+        "hp": 61,
+        "conditions": []
+    },
+    {
+        "name": "Robby",
+        "ac": 13,
+        "max_hp": 63,
+        "hp": 50,
+        "conditions": ["bend luck"]
+    },
+    {
+        "name": "Brok",
+        "ac": 16,
+        "max_hp": 102,
+        "hp": 15,
+        "conditions": []
+    }
+]

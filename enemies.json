@@ -1,0 +1,52 @@
+{
+    "fire elemental": {
+        "ac": 13,
+        "hp_expr": "12d10+36",
+        "initiative": 3
+    },
+    "giant shark": {
+        "ac": 13,
+        "hp_expr": "11d12+55",
+        "initiative": 0
+    },
+    "bulette": {
+        "ac": 17,
+        "hp_expr": "9d10+45",
+        "initiative": 0
+    },
+    "young green dragon": {
+        "ac": 18,
+        "hp_expr": "16d10+48",
+        "initiative": 1
+    },
+    "yeti": {
+        "ac": 12,
+        "hp_expr": "6d10+18",
+        "initiative": 1
+    },
+    "shadow": {
+        "ac": 12,
+        "hp_expr": "3d8+3",
+        "initiative": 2
+    },
+    "lost": {
+        "ac": 15,
+        "hp_expr": "12d8+24",
+        "initiative": 1
+    },
+    "wretched": {
+        "ac": 15,
+        "hp_expr": "4d6-4",
+        "initiative": 1
+    },
+    "shadow dancer": {
+        "ac": 15,
+        "hp_expr": "13d8+13",
+        "initiative": 3
+    },
+    "barlgura": {
+        "ac": 15,
+        "hp_expr": "8d10+24",
+        "initiative": 2
+    }
+}

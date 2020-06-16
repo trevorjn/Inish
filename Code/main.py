@@ -3,8 +3,8 @@ import json
 from character import Character
 from combat_tracker import CombatTracker
 
-PARTY_FILE = 'party.json'
-ENEMY_FILE = 'enemies.json'
+PARTY_FILE = '../Resources/party.json'
+ENEMY_FILE = '../Resources/enemies.json'
 
 NEXT_TOKENS = ['n', 'next']
 QUIT_TOKENS = ['q', 'quit', 'x', 'exit']

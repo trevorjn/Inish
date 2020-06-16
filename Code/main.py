@@ -12,6 +12,7 @@ HIT_TOKENS = ['hit']
 HEAL_TOKENS = ['heal']
 ADD_ENEMY_TOKENS = ['add']
 CONDITION_TOKENS = ['c', 'cond', 'condition']
+HELP_TOKENS = ['h', 'help']
 
 def load_party_from_json(filename):
     # Load party info from file
@@ -68,6 +69,23 @@ def load_enemies():
 
     return enemies
 
+def display_help_info():
+    s = """
+Commands:
+    Help                 -> "h" | "help"
+    Quit program         -> "q" | "quit" | "x" | "exit"
+    Cycle turn           -> "n" | "next"
+    Damage target        -> "hit TARGET AMOUNT"
+    Heal target          -> "heal TARGET AMOUNT"
+    Add new enemy        -> "add"
+    Add/remove condition -> "[c|cond|condition][+/-] TARGET CONDITION"
+
+Note:
+    TARGET is turn order index OR unique substring of TARGET's name.
+    e.g. "c- 3 unconscious", "cond+ Robby stunned"
+        """
+    print(s, end='')
+
 def start_combat(tracker):
     while True:
         tracker.print_status()
@@ -95,6 +113,8 @@ def start_combat(tracker):
                     tracker.add_condition(tokens[1], ' '.join(tokens[2:]))
                 else:
                     tracker.remove_condition(tokens[1], ' '.join(tokens[2:]))
+            elif tokens[0] in HELP_TOKENS:
+                display_help_info()
             else:
                 print('ERROR: Unrecognized Command')
         except:

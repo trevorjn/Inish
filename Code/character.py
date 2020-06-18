@@ -38,8 +38,16 @@ class Character:
     def roll_health(hp_expr):
         terms = hp_expr.split('+')
         if len(terms) > 1:
+            # Modifier included, e.g. "4d8+16"
             hit_dice, mod = terms
         else:
+            # No modifier, e.g. "4d8"
             hit_dice, mod = terms[0], 0
-        dice_quant, dice_faces = map(int, hit_dice.split('d'))
-        return sum([random.randint(1, dice_faces) for i in range(dice_quant)]) + int(mod)
+
+        # Check if hit_dice is a die expression, i.e. "NdM"
+        if 'd' in hit_dice.lower():
+            dice_quant, dice_faces = map(int, hit_dice.split('d'))
+            return sum([random.randint(1, dice_faces) for i in range(dice_quant)]) + int(mod)
+        else:
+            # hit_dice is just a single number
+            return sum([int(hit_dice), mod])
